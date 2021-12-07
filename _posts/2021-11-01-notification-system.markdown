@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Horizontally scalable notification system through NestJS microservice"
+title:  "Scalable notification system microservice"
 date:   2021-10-03 13:25:13 -0400
 categories: video-compression AI deep-learning
 background: style-2

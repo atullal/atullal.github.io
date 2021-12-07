@@ -333,6 +333,13 @@
     color: white;
 }
 
+@include media-query($on-laptop) {
+    .hero-col {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 1));
+        width:         calc(100% - (#{$spacing-unit} / 1));
+    }
+}
+
 a.main-article-link {
     color: $brand-color-2;
     text-decoration: none;
@@ -394,7 +401,15 @@ a.main-article-link {
 .shadow-3 {
     position: absolute;
     z-index: -10;
-    margin-top: -250px;
-    width: 300px;
-    margin-left: 150px;
+    right: 15vw;
+    width: 30vw;
+    margin-top: -30vw;
+}
+
+@include media-query($on-palm) {
+    .shadow-3 {
+        right: 0px;
+        width: 70vw;
+        margin-top: -60vw;
+    }
 }
