@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $brand-color;
+    border-top: 5px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -243,4 +243,70 @@
             font-size: 18px;
         }
     }
+}
+
+.background-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20vw;
+    z-index: -1;
+}
+
+@include media-query($on-palm) {
+    .background-1 {
+        left: -10vw;
+        width: 40vw;
+    }
+}
+
+.background-2 {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    width: 50vw;
+    z-index: -1;
+}
+
+@include media-query($on-palm) {
+    .background-2 {
+        right: -10vw;
+        width: 90vw;
+    }
+}
+
+.background-3 {
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+    width: 35vw;
+    z-index: -1;
+}
+
+@include media-query($on-palm) {
+    .background-3 {
+        top: 2vh;
+        left: -20vw;
+        width: 80vw;
+    }
+}
+
+
+.footer-background {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+    margin-top: -30px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: $brand-color-3;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.tags {
+    margin-bottom: 10px;
 }
