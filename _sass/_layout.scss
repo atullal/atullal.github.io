@@ -2,7 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-light;
+    padding-top:10px;
+    margin-bottom: 5px;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -11,7 +12,7 @@
 
 .site-title {
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 56px;
     margin-bottom: 0;
     float: left;
@@ -291,6 +292,22 @@
     }
 }
 
+.main-article {
+    overflow: hidden;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    height: 368px;
+    color: white;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.main-article:hover {
+    box-shadow: 0px 5px 10px #00000015;
+    transform: perspective(95em) rotateX(3deg) rotateY(-3deg);
+}
 
 .footer-background {
     position: absolute;
@@ -309,4 +326,75 @@
 }
 .tags {
     margin-bottom: 10px;
+}
+
+.hero-col {
+    width: calc(50% - (#{$spacing-unit} / 1));
+    color: white;
+}
+
+a.main-article-link {
+    color: $brand-color-2;
+    text-decoration: none;
+
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+.hero-col-1 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+}
+
+.hero-col-2 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .hero-col-1 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+
+    .hero-col-2 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+.secondary-article {
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    height: 158px;
+    color: white;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+}
+
+.secondary-article-1:hover {
+    box-shadow: 0px 5px 10px #00000015;
+    transform: perspective(95em) rotateX(-6deg) rotateY(4deg);
+}
+
+.secondary-article-2:hover {
+    box-shadow: 0px 5px 10px #00000015;
+    transform: perspective(95em) rotateX(-6deg) rotateY(-6deg);
+}
+
+.shadow-3 {
+    position: absolute;
+    z-index: -10;
+    margin-top: -250px;
+    width: 300px;
+    margin-left: 150px;
 }
