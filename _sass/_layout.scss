@@ -413,3 +413,17 @@ a.main-article-link {
         margin-top: -60vw;
     }
 }
+
+.resume-arrow {
+    float: right;
+    margin-top: -75px;
+}
+
+.resume-card {
+    height: 150px;
+}
+
+.resume-card:hover {
+    box-shadow: 0px 5px 10px #00000015;
+    transform: perspective(95em) rotateX(-2deg) rotateY(-6deg);
+}

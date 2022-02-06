@@ -7,7 +7,7 @@
 
 # Site settings
 title: Atul Lal
-email: atul.lal123@gmail.com
+email: atul@atullal.xyz
 description: > 
   Hello! I am a software developer.
   Always looking to find the most efficient solution.
@@ -16,5 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://atullal.xyz" # the base hostname & protocol for your site
 twitter_username: atulal
 github_username:  atullal
+plugins:
+  - jekyll-seo-tag
 # Build settings
 markdown: kramdown
