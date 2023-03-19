@@ -4,7 +4,7 @@ title:  "Parallelization of Borůvka's algorithm"
 date:   2020-12-11 13:25:13 -0400
 categories: parallel-computing graph-algorithm Borůvka-algorithm
 background: style-2
-description: In today’s world, video consumption has become an indispensable part of people’s life. Artificial Intelligence and Deep Learning models might be able to help us in compressing videos and save huge amounts of storage space.
+description: At a Georgia Tech research program, the author parallelized Borůvka's algorithm for minimum spanning trees using Java Habanero. They compared multithreaded program performance across different thread and core counts, maximizing CPU utilization with concurrent thread execution, and leveraging the Thread class or Runnable interface.
 ---
 During my research summer program at Georgia Tech, I implemented parallelization of Borůvka's algorithm to find the minimum spanning tree of an undirected graph. The idea was to implement a multithreaded program of Borůvka's algorithm using Java Habanero and compare its performance for the different number of threads and cores. Multithreading allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such a program is called a thread. So, threads are lightweight processes within a process. In Java Habanero, threads can be acquired by either extending the Thread class or implementing the Runnable interface.
 

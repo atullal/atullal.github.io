@@ -2,40 +2,66 @@
 layout: post
 title:  "Brentford FC: Love story of Data Science & Football"
 date:   2021-08-24 13:25:13 -0400
-categories: video-compression AI deep-learning
-background: style-2
-description: In today’s world, video consumption has become an indispensable part of people’s life. Artificial Intelligence and Deep Learning models might be able to help us in compressing videos and save huge amounts of storage space.
+categories: data-science football
+background: style-1
+description: The article showcases Brentford FC's innovative use of data science and AI in football, revolutionizing player recruitment and on-field tactics under owner Matthew Benham. Their data-driven approach resulted in Brentford's Premier League promotion after 70 years and significant profits from player transfers. By combining technology and analytics, Brentford FC exemplifies the potential of data science to transform football clubs' fortunes on and off the pitch.
 ---
-In today’s world, video consumption has become an indispensable part of people’s life. The most popular way to consume content in this format is through the internet. More than 60% of the world’s internet data consumption is consumed by video streaming and it is still considered growing. More and more players are getting into this field including big names like Disney and Apple while existing players like Netflix and Amazon continue to grow. Platforms like YouTube also play an important role in this field. It is undeniably extremely important that the video we serve on the internet should be most optimized and compressed to save massive amounts of data as well as money for both users as well as corporates investing in this business. While the compressed video will not only save data consumption costs for consumers and ISPs but would also help in delivering higher resolution and quality videos with the existing internet speeds. Slower internet connections result in low-resolution video streaming, which has been a concern for many companies in this field because this leads to lower quality of experience to the end-users than the quality standards and benchmarks set by these companies to ensure optimal viewing experience.
+In the era of rapid technological advancements, the use of data science and artificial intelligence (AI) has become increasingly prevalent across various industries, including sports. One club that has embraced this evolution is Brentford FC, a football team that has become a shining example of how AI and data science can revolutionize the way clubs approach the transfer market, player selection, and overall strategy. This article delves into the fascinating journey of Brentford FC and how the club has used data-driven techniques to propel themselves into the Premier League.
 
-<h1>How does this work?</h1>
-The process of compressing video files is called video encoding. There are many popular ways to compress video files (the most popular being H.264). Encoding method H.264 compression has since become standard across the industry due to its advantages in efficiency as well as extend to which it compresses video files. Though there are few better standards available like H.265 which is better in many ways, these are still not widely used on the internet. HTML standards have provided video players with pretty wide decoding formats.
+<h1>A Marriage of Data and Football</h1>
+Brentford FC's love story with data science began when Matthew Benham, a mathematician and betting site owner, took over the club in 2012. Benham's background in sports betting and his access to vast amounts of data proved to be a game-changer for the club. He quickly recognized the potential of using data to optimize player recruitment and on-field performance.
 
-Ideally, the best compression should have an accompanying decoder written on language written for the internet and browsers, like Javascript. Therefore the best possible compressed video files should be tailor-made for streaming, for which decoder should be written on Javascript.
 
-For implementing Deep learning-based video compression for the internet, the main challenge is implementing a decoder in Javascript for that compression model.
+Benham introduced data-driven decision-making to Brentford FC, a move that transformed the club's approach to the transfer market. By using AI and data science, Brentford FC was able to identify undervalued players who showed potential for growth and development. This allowed the club to make strategic investments in players who could contribute significantly to the team's success, without breaking the bank.
 
-<h1>Implementation</h1>
-A deep learning model that uses motion estimation and techniques like entropy coding should provide good compression. Compression time should not really be a big concern, the quality and bitrate should be important while designing this model because compression is a one-time process for videos. Decoding should be done on the client-side with a decoder written in Javascript so that it can be widely used on the web.
+The club's data-driven strategy also extended to its on-field performance, with analysts and coaches using advanced metrics to assess player fitness, identify weaknesses in the opposition, and develop tailored game plans. By embracing data science, Brentford FC was able to gain an edge over its rivals, who traditionally relied on intuition and experience.
 
-<h1>Proposed idea</h1>
-The idea is to create a full-stack web application, which functions similar to Youtube, users are allowed to upload video as well as stream. For demo purposes, the following tech stack is used -
-1. Tensorflow, PyTorch, or Keras — For Video Encoding
-2. Django REST or NestJS - For Backend
-3. MongoDB - Used as Database
-4. ReactJS — For frontend
-5. Tensorflow JS or Keras JS — For Video Decoding
+<h1>Brentford's Road to the Premier League</h1>
+Brentford FC's ascent to the Premier League can be largely attributed to its data-driven approach. The club's investment in cutting-edge technology and analytical tools allowed it to identify and capitalize on opportunities that other teams might have missed. This focus on data science paid off handsomely, as Brentford secured promotion to the Premier League in the 2020-2021 season, marking its first appearance in the top flight of English football in over 70 years. Brentford gained promotion while turning up a profit from it's transfer business. While it's important to note that not every transfer can be directly attributed to data science, Brentford's data-driven approach has undoubtedly played a significant role in their transfer market success. Here is a list of some notable players Brentford has bought, sold, and profited from in recent years:
 
-The Encoding is done using a deep learning model which uses techniques like motion estimation, entropy encoding, and vector decomposition to compress video file and pack it into binaries. More processing is done to compress the video further by using reference frames and providing the changed pixel information as well as dividing the video into chunks and packing necessary reference frames with those chunks. These will ensure video to be compressed as well as split into chunks ready to be sent to the frontend for decoding.
+1. Neal Maupay
+    - Bought from: Saint-Étienne (2017)
+    - Transfer fee paid: £1.6 million
+    - Sold to: Brighton & Hove Albion (2019)
+    - Transfer fee received: £20 million
+    - Profit: £18.4 million
 
-The Flask or Django REST-based backend would help in the usual token-based authentication as well as would carry out many features for the web application. This API would also be responsible for sending video chunks for the frontend to decode. Flask with SQLAlchemy as well as Django has pretty good ORM (Object Relational Mapping), which would also us to build and maintain a database easily. The MySQL-based database would contain useful information as well as video metadata. For the sake of the demo, the fuzzy search should be enough for the video search feature which would again be implemented in our backend service.
+2. Ollie Watkins
+    - Bought from: Exeter City (2017)
+    - Transfer fee paid: £1.8 million
+    - Sold to: Aston Villa (2020)
+    - Transfer fee received: £28 million
+    - Profit: £26.2 million
 
-Building frontend on a modular framework like Angular should be pretty good and simple, as it provides faster development benefits as well as the component system which should help make beautiful user interfaces with less effort. There is a lot of online support available for this framework due to its popularity as well as it is based on TypeScript which should help write our decoder on it.
-The decoder should be pretty straightforward once the encoding is fixed. The main problem would be rendering speed as complex compression algorithms would result in slow decoding which would lead to slow and heavy decoding speeds. A very efficient decoder is the biggest challenge, as well as the decoder, should be light to be widely compatible. Although taking the faster computing speed in modern devices into account, one could aim for targeting those high-speed devices and make this compression for modern and future devices.
+3. Chris Mepham
+    - Bought from: Brentford Academy (Youth system)
+    - Transfer fee paid: N/A
+    - Sold to: AFC Bournemouth (2019)
+    - Transfer fee received: £12 million
+    - Profit: £12 million (minus any potential academy costs)
 
-<h1>Compression using Deep Learning</h1>
-There are a lot of research papers and techniques available online, but most of them are not implemented yet. The idea here is to read them and gather the best practices from them and implement them. Decoding becomes one for the biggest problem as most of the model encodes using Deep Learning and then the decoder is also trained as model in Python, but for writing the same decoding in JavaScript is simply not possible. The decoder model could be exported and somehow be used through JavaScript to be used on the web, but that won’t exactly be an efficient solution. As well as heavy compression algorithms would require matrix multiplications on the frontend to decode, which would again be a bit heavy for clients. Finding a good balance and writing in the most efficient possible way should be the main concern here for this work successfully.
+4. Said Benrahma
+    - Bought from: Nice (2018)
+    - Transfer fee paid: £1.53 million
+    - Sold to: West Ham United (2020, initially on loan, then - permanent)
+    - Transfer fee received: £25 million (including add-ons)
+    - Profit: £23.47 million
 
-Check out this [report][report-link] for more info on data consumption trends of the internet.
+5. Ezri Konsa
+    - Bought from: Charlton Athletic (2018)
+    - Transfer fee paid: £2.5 million
+    - Sold to: Aston Villa (2019)
+    - Transfer fee received: £12 million
+    - Profit: £9.5 million
 
-[report-link]: https://www.sandvine.com/phenomena
+Brentford's success story demonstrates the power of combining data science and football. By harnessing the potential of AI and data-driven decision-making, the club has achieved remarkable success on the field and set a new standard for other football clubs to follow.
+
+As Brentford FC continues to thrive in the Premier League, the club's love affair with data science is far from over. With data playing a pivotal role in the modern game, other clubs will likely look to emulate Brentford's approach, ushering in a new era of data-driven football.
+
+<h1>Conclusion</h1>
+In conclusion, Brentford FC's journey serves as a testament to the power of data science and its potential to revolutionize football. By embracing cutting-edge technology and leveraging the insights provided by data, the club has managed to rise through the ranks of English football, forging a love story between data science and football that is sure to inspire others.
+
+
+Check out this interesting [article][footballarticle-link] from TalkSport for more info on how data science helped Brentford FC.
+
+[footballarticle-link]: https://talksport.com/football/fa-cup/659667/brentford-data-revolution-england-smartest-club-championship-leicester-fa-cup/

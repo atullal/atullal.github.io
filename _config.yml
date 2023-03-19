@@ -9,12 +9,13 @@
 title: Atul Lal
 email: atul@atullal.xyz
 description: > 
-  Hello! I am a software developer.
-  Always looking to find the most efficient solution.
-  Passionate about Distributed Systems, Parallel Computing, and Deep Learning.
+  I'm Atul Lal, a computer science student pursing Master's from Boston University. As a full-stack developer, I have experience with C++, .NET Core, SQL Server, React, Java, and Angular. I've worked at Commvault Systems and Docyt, focusing on software engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://atullal.xyz" # the base hostname & protocol for your site
 twitter_username: atulal
+twitter:
+  username: atulal
+  card: summary
 github_username:  atullal
 plugins:
   - jekyll-seo-tag

@@ -9,9 +9,15 @@ card: resume
 <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
 
 <h4>Education</h4>
+<div style="display: inline-block"> <strong>Boston University, MA, USA</strong></div>
+<div style="display: inline-block;float: right"> September 2022 - attending </div>
+_Pursuing a Master of Science (CGPA 4.00/4.00)_
+
+Relevant Courses: Advanced Algorithms, Object Oriented Principles, Computer Networks, Event Data Streaming, Network Security, Big Data Analytics
+<br/>
 <div style="display: inline-block"> <strong>Bennett University, Greater Noida, India</strong></div>
 <div style="display: inline-block;float: right"> August 2016 - June 2020 </div>
-_Secured a Bachelor of Technology with Distinction (CGPA 8.18/10)_
+_Secured a Bachelor of Technology with Distinction (CGPA 8.18/10.00)_
 
 Relevant Courses: High Performance Computing, Data Structures, Artificial Intelligence and Machine Learning, Big Data & Business Intelligence, Discrete Mathematical Structures, Information Management Systems
 <br/><br/>
@@ -128,3 +134,4 @@ _Android & IOS application_
 [angular-post-url]: https://atullal.xyz/angular/angularjs/frontend/2020/05/17/getting-most-of-angular-js.html
 [boruvka-post-url]: https://atullal.xyz/parallel-computing/graph-algorithm/bor%C5%AFvka-algorithm/2020/12/11/boruvka-parallel.html
 [video-comp-post-url]: https://atullal.xyz/video-compression/ai/deep-learning/2019/10/30/video-compression-deep-learning-copy.html
+
