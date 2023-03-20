@@ -613,3 +613,92 @@ a.main-article-link {
         background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     }
 }
+
+.contact {
+    position: absolute;
+    left: 0px;
+    width: 100vw;
+    background-color: #161616;
+    background-image: linear-gradient(#161616 0%, #161616 50%, #130c11 100%);
+    margin-bottom: 100vh;
+    color: white;
+    z-index: 1;
+}
+
+.noise {
+    background-size: 128px;
+    background-repeat: repeat;
+    background-image: url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png);
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    color: white;
+    z-index: -1;
+}
+
+.content-contact {
+    z-index: 1;
+    color: white;
+    padding-top: 115px;
+    text-align: center;
+
+    h1 {
+    background: -webkit-linear-gradient(34deg, #fdd8b6 0%, #e19cf3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 100;
+    }
+
+    .decor {
+        position: absolute;
+        top: 15px;
+        margin-left: -105px;
+    }
+
+    .svg2 {
+        top: 115px;
+        margin-left: -23px;
+    }
+    .svg3 {
+        top: 138px;
+    }
+
+    .core-contact {
+        margin-top: 100px;
+        padding-bottom: 40px;
+        
+        p {
+            font-weight: 200;
+            font-size: 1.3em;
+            color: #f8cec1;
+        }
+    }
+
+    .cta-buttons {
+        margin-top: 80px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        background: none;
+        color: #f8cec1;
+        border: 2px solid #f8cec1;
+        border-radius: 4px;
+        font-size: 1.4em;
+        font-weight: 300;
+    }
+
+    .cta-linkedin {
+        margin: 0px 20px;
+    }
+
+    .button-svg {
+        margin-top: -5px;
+        margin-right: 10px;
+    }
+
+    .button-linkedin {
+        margin-top: -10px;
+    }
+}
