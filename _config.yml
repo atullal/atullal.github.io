@@ -19,5 +19,6 @@ twitter:
 github_username:  atullal
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 # Build settings
 markdown: kramdown
