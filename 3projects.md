@@ -15,7 +15,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/dalle1.png" style="
+        <img alt="AI Generated for Operator placement on edge systems in stream processing project" src="{{ site.baseurl }}/assets/images/dalle1.png" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;
@@ -32,7 +32,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/dalle2.png" style="
+        <img alt="AI Generated for Scalable Distributed MD5 Hash Matching project"  src="{{ site.baseurl }}/assets/images/dalle2.png" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;
@@ -49,7 +49,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/dalle3.png" style="
+        <img alt="AI Generated for Exploring the Home Mortgage Market using Spark on Google Cloud project" src="{{ site.baseurl }}/assets/images/dalle3.png" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;
@@ -66,7 +66,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/dalle4.png" style="
+        <img alt="AI Generated for Video Compression using Deep Learning project" src="{{ site.baseurl }}/assets/images/dalle4.png" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;
@@ -83,7 +83,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/aigen1.jpeg" style="
+        <img alt="AI Generated for Multithreaded Borůvka's algorithm project" src="{{ site.baseurl }}/assets/images/aigen1.jpeg" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;
@@ -100,7 +100,7 @@ permalink: /projects/
         </a>
     </div>
     <div class="col-5">
-        <img src="{{ site.baseurl }}/assets/images/dalle6.png" style="
+        <img alt="AI Generated for Tiny face detection in the wild project" src="{{ site.baseurl }}/assets/images/dalle6.png" style="
             border-radius: 0px 10px 10px 0px; min-height: 400px;
         margin-top: 40px;
         display: block;

@@ -7,7 +7,7 @@ hideTitle: true
 
 <div style="position: relative; z-index: -1;">
 
-<img src="{{ site.baseurl }}/assets/images/profile.jpg" style="width: 20vw; max-width: 360px; display: block;
+<img alt="Profile picture of Atul Lal" src="{{ site.baseurl }}/assets/images/profile.jpg" style="width: 20vw; max-width: 360px; display: block;
     margin: 0 auto;">
 
 <div id="grad1" style="    height: 400px;
@@ -102,14 +102,14 @@ Currently obsessed about stream processing systems.
     <div class="col-md-7">
         <div class="image-collection">
         <div id="grad-fun1" class="fun-grad"><div id="grad-fun11" class="fun-grad"></div></div>
-        <img id="fun1" src="{{ site.baseurl }}/assets/images/deniro.jpg" class="sq-img" onmouseover="changeText(1)">
+        <img alt="Robert De Niro" id="fun1" src="{{ site.baseurl }}/assets/images/deniro.jpg" class="sq-img" onmouseover="changeText(1)">
         <div id="grad-fun2" class="fun-grad display-none"><div id="grad-fun21" class="fun-grad"></div></div>
-        <img id="fun2" src="{{ site.baseurl }}/assets/images/davies.jpg" class="sq-img" onmouseover="changeText(2)">
+        <img alt="Miles Davies" id="fun2" src="{{ site.baseurl }}/assets/images/davies.jpg" class="sq-img" onmouseover="changeText(2)">
         <br/>
         <div id="grad-fun3" class="fun-grad display-none"><div id="grad-fun31" class="fun-grad"></div></div>
-        <img id="fun3" src="{{ site.baseurl }}/assets/images/monet.jpg" class="sq-img" onmouseover="changeText(3)">
+        <img alt="Monet" id="fun3" src="{{ site.baseurl }}/assets/images/monet.jpg" class="sq-img" onmouseover="changeText(3)">
         <div id="grad-fun4" class="fun-grad display-none"><div id="grad-fun41" class="fun-grad"></div></div>
-        <img id="fun4" src="{{ site.baseurl }}/assets/images/modric.jpg" class="sq-img" onmouseover="changeText(4)">
+        <img alt="Luka Modric" id="fun4" src="{{ site.baseurl }}/assets/images/modric.jpg" class="sq-img" onmouseover="changeText(4)">
         </div>
     </div>
     <div class="col-md-5">
