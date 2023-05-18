@@ -9,9 +9,7 @@ description: Object design and documentation in a software system play a crucial
 ---
 
 <h1>Introduction</h1>
-In the world of big data, efficient and scalable data processing frameworks are essential. Spark is one of the most prominent frameworks, providing extensive libraries and capabilities for tasks ranging from data transformation to machine learning. Coupled with Google Cloud's powerful infrastructure, Spark provides an ideal environment for big data analytics.
-
-One such project that leverages these technologies is the exploration of the Home Mortgage Market using Spark on Google Cloud. This project utilized Google Cloud's Dataproc service, a fast, easy-to-use, fully managed cloud service for running Apache Spark and Apache Hadoop clusters in a simpler, more cost-efficient way.
+The pertinence of object architecture and annotation within a software entity cannot be understated, being instrumental in delineating its configuration, operative capabilities, and the interconnections amongst its distinct elements. This article embarks on a comprehensive scrutiny of the object architecture and annotation of an avant-garde banking software system, delving into the strategic design decisions, adherence to software tenets, and prospective developments.
 
 <h1>Object Modeling</h1>
 
