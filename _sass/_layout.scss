@@ -186,6 +186,9 @@
     margin-left: 0;
     list-style: none;
 
+    margin-left: -15px;
+    margin-right: -15px;
+
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -220,6 +223,7 @@
     letter-spacing: -1px;
     line-height: 1;
     margin-bottom: $spacing-unit;
+    margin-top: 40px;
 
     @include media-query($on-laptop) {
         font-size: 36px;

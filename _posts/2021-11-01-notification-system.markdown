@@ -4,6 +4,7 @@ title:  "Scalable notification system microservice"
 date:   2021-10-03 13:25:13 -0400
 categories: microservices nestjs redis
 background: style-2
+cover: dalle8.png
 description: This article explores a scalable NestJS-based notification system microservice utilizing Redis pub/sub and authenticated websockets. It highlights horizontal scalability, key components like RedisPropagator, Socket states, and gateways. This robust solution efficiently manages concurrent connections and delivers real-time notifications securely to users.
 ---
 Designing a scalable notification system is crucial for applications that serve a large number of users. Microservices architecture has gained popularity for its ability to break down complex applications into smaller, more manageable components. In this article, we'll explore a scalable notification system microservice built using NestJS, Redis pub/sub model, and authenticated websockets. We'll discuss how this solution provides horizontal scalability and dive into key components such as the RedisPropagator, Socket states, and gateways.

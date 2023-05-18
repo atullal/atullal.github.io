@@ -3,6 +3,7 @@ layout: post
 title:  "Breaking Boundaries: A Scalable Distributed MD5 Hash Matching System"
 date:   2022-10-15 13:25:13 -0400
 categories: distributed md5 networking
+cover: dalle2.png
 background: style-1
 description: Distributed MD5 Hash Matching Scalable Password Cracking System is a project that designs a distributed system for cracking 5-character passwords using MD5 hash matching. The system employs a web interface, a management service, and multiple worker nodes to enable scalable brute-force attacks. Users can add or remove worker nodes, improving efficiency and adaptability.
 ---

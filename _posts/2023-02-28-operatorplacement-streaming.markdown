@@ -3,6 +3,7 @@ layout: post
 title:  "Operator placement on edge systems in stream processing"
 date:   2023-02-28 13:25:13 -0400
 categories: streaming flink raspberrypi
+cover: dalle1.png
 background: style-2
 description: Working on a heterogeneity-aware operator placement project, our team utilized Raspberry Pi devices and Apache Flink to optimize edge offloading for stream processing systems, reducing latency and data traffic while maximizing resource efficiency in real-time data processing.
 ---

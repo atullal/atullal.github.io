@@ -4,6 +4,7 @@ title:  "How to get most out of Angular JS?"
 date:   2020-05-17 13:25:13 -0400
 categories: angular angularjs frontend
 background: style-1
+cover: dalle11.png
 description: It can be challenging to still use Angular JS in the modern web application, but it is not impossible. Here are a few tips and tricks to get the most out of Angular JS, that I learned over the course of my internship.
 ---
 [Angular JS][angular-link] has been out for a long time, October 2010 to be precise and it has made a huge impact in the industry (albeit not as much as ReactJS). A lot has changed since then, what Angular JS claimed to be its core features is now very commonly used by many other modern frameworks, some have even improved upon it. Having said that, there are still many large-scale applications using Angular JS for its maturity and long-term support. When Angular JS launched, it offered a lot of functionality like component-based architecture, two-way data binding, etc. to name a few, but these patterns have become common in the industry now. Angular JS has stopped supporting security patches and bug fixes in favor of newer frameworks. It can be challenging to use Angular JS in the modern web application, but it is not impossible. Here are a few tips and tricks to get the most out of Angular JS, that I learned over the course of my internship.

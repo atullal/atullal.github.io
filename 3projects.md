@@ -40,9 +40,9 @@ permalink: /projects/
         object-fit: cover;">
     </div>
     <div class="col-7">
-        <a href="/streaming/flink/raspberrypi/2023/02/28/operatorplacement-streaming.html">
+        <a href="/big-data/spark/cloud/2023/04/01/home-mortgage-big-data.html">
             <div class="card beach">
-            <h1 style="font-weight:200">Loan Approval Prediction for Home Mortgages</h1>
+            <h1 style="font-weight:200">Exploring the Home Mortgage Market using Spark on Google Cloud</h1>
             <br/>
             <p style="font-weight:400">Predicting loan approval factors for home mortgages using the 2016-17 HMDA dataset. Identifying key influences such as gender, race, income, and property type, lenders can make data-driven decisions, and enhance profitability while assessing credit risk accurately.</p>
             </div>
@@ -91,7 +91,7 @@ permalink: /projects/
         object-fit: cover;">
     </div>
     <div class="col-7">
-        <a href="/streaming/flink/raspberrypi/2023/02/28/operatorplacement-streaming.html">
+        <a href="/face-detection/ai/deep-learning/2018/09/25/face-detection.html">
             <div class="card forest">
             <h1 style="font-weight:200">Tiny face detection in the wild</h1>
             <br/>
