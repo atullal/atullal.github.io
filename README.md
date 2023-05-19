@@ -1,8 +1,9 @@
 # Atul Lal's Personal Blog
 
-![Blog Screenshot](https://atullal.xyz/images/blog-screenshot.png)
+Welcome to my personal blog! This repository contains the code for my blog hosted on GitHub Pages using Jekyll. In this blog, I share my thoughts, experiences, and insights related to computer science.
 
-Welcome to my personal blog! This repository contains the code for my blog hosted on GitHub Pages using Jekyll. In this blog, I share my thoughts, experiences, and insights related to Distributed Systems, Parallel Computing, and Deep Learning.
+
+![Blog Screenshot](./BlogScreenshot.png)
 
 ## Features
 
