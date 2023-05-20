@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div id="gradient-container"></div>
+<article id="postWrapper" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   {% if page.background == "style-1" %}
     <div class="background-2">{% include background2.svg %}</div>
@@ -9,6 +10,12 @@ layout: default
   {% if page.background == "style-2" %}
     <div class="background-3">{% include background3.svg %}</div>
   {% endif %}
+  <img src="{{ site.baseurl }}/assets/images/{{ page.cover }}" style="
+  height: 400px;
+margin-bottom: 20px;
+display: block;
+width: 100%;
+object-fit: cover;">
   <header class="post-header">
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
@@ -23,3 +30,59 @@ layout: default
   </div>
 
 </article>
+
+<script>
+// window.onload = function() {
+//   const container = document.getElementById('gradient-container');
+//   const postWrapper = document.getElementById('postWrapper');
+//   const postWrapperRect = postWrapper.getBoundingClientRect();
+//   const pageHeight = document.body.scrollHeight - 300; // subtracting 300 to ensure it is 300px away from the bottom
+//   const pageWidth = document.body.scrollWidth;
+
+//   const numGradients = Math.floor(pageHeight / 500);
+
+//   for (let i = 0; i < numGradients; i++) {
+//     const gradient = document.createElement('div');
+//     gradient.className = 'gradient';
+
+//     const size = Math.floor(Math.random() * 200) + 200;
+//     gradient.style.width = `${size}px`;
+//     gradient.style.height = `${size}px`;
+
+//     let top, left;
+//     top = Math.random() * pageHeight;
+//     left = Math.random() * pageWidth;
+//     if(
+//       left >= postWrapperRect.left &&
+//       left <= postWrapperRect.right) {
+//         switch(Math.floor(Math.random() * 2)) {
+//           case 0:
+//             left = Math.random() * postWrapperRect.left;
+//             break;
+//           case 1:
+//             left = Math.random() * (pageWidth - postWrapperRect.right) + postWrapperRect.right;
+//             break;
+//         }
+//     }
+
+//     gradient.style.top = `${top}px`;
+//     gradient.style.left = `${left}px`;
+
+//     const color1 = getRandomColor();
+//     gradient.style.background = `radial-gradient(${color1}b5 0%, #0000ff00 70%, #0000ff00)`;
+
+//     container.appendChild(gradient);
+//   }
+
+//   function getRandomColor() {
+//     const letters = '0123456789ABCDEF';
+//     let color = '#';
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   }
+// }
+
+
+</script>
