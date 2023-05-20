@@ -12,7 +12,7 @@ description: >
   I'm Atul Lal, a computer science student pursing Master's from Boston University. As a full-stack developer, I have experience with C++, .NET Core, SQL Server, React, Java, and Angular. I've worked at Commvault Systems and Docyt, focusing on software engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://atullal.xyz" # the base hostname & protocol for your site
-twitter_username: atulal`
+twitter_username: atulal
 twitter:
   username: atulal
   card: summary
