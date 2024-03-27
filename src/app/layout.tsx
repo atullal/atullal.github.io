@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: `Atul Lal`,
   description: `Personal blog of Atul Lal.`,
   openGraph: {
-    images: ['/favicon/atullal-og.jpeg'],
+    images: ['https://atullal.xyz/favicon/atullal-og.jpeg'],
   },
 };
 
