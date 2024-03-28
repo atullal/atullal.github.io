@@ -25,21 +25,21 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-2">My Socials</h3>
           <div className="flex justify-center md:justify-start space-x-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/atullal123"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
               <LinkIcon className="h-5 w-5 mr-2" />
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://github.com/atullal"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
               <CodeBracketIcon className="h-5 w-5 mr-2" />
               GitHub
             </a>
             <a
-              href="#"
+              href="https://twitter.com/atulal"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
               <GlobeAltIcon className="h-5 w-5 mr-2" />
@@ -50,9 +50,7 @@ const Footer = () => {
         <div className="text-center md:text-right">
           <h3 className="text-lg font-bold mb-2">About Me</h3>
           <p className="text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl
-            eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl
-            eget nisl.
+          Recent Masters CS grad from Boston University with 3 years of work ex. | Ex Software Engineer @ Commvault Systems | Expertise in Distributed Systems & Cloud
           </p>
         </div>
       </div>

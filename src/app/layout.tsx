@@ -1,5 +1,4 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -9,9 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `Atul Lal`,
-  description: `Personal blog by Atul Lal.`,
+  description: `Personal blog of Atul Lal.`,
   openGraph: {
-    images: [HOME_OG_IMAGE_URL],
+    images: ['/favicon/atullal-og.jpeg'],
   },
 };
 

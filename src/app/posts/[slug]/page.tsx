@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Alert from "@/app/_components/alert";
 import Container from "@/app/_components/container";
@@ -60,7 +59,7 @@ export default async function Post({ params }: Params) {
             <div className="relative mt-1 h-150 w-150 flex-shrink-0 text-align-center">
               <a href="/author/mario-sanchez">
               <Image
-                src={'/assets/blog/authors/atullal.jpeg'}
+                src={'/assets/blog/authors/atullal_large.png'}
                 alt={`Image of Atul Lal`}
                 className="rounded-full object-cover"
                 width={150}
@@ -73,7 +72,7 @@ export default async function Post({ params }: Params) {
                 <h3 className="text-lg font-medium text-white">About Atul Lal</h3>
               </div>
               <div>
-                <p>Mario is a Staff Engineer specialising in Frontend at <a href="https://vercel.com/" rel="noopener" target="_blank" className="text-neutral-50">Vercel</a>, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.</p>
+                <p>I am a software engineer with a passion for creating innovative and impactful applications that solve real-world problems. At Commvault Systems, I optimized APIs, developed distributed systems, and automated cloud environments for over two years.</p>
               </div>
               <div className="mt-3">
                 <a className="bg-brand-secondary/20 rounded-full py-2 text-sm text-neutral-50" href="/about">View Profile</a>
@@ -100,7 +99,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Atul's Blog`;
 
   return {
     title,
