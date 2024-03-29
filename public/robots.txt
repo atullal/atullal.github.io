@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atullal.xyz
+
+# Sitemaps
+Sitemap: https://atullal.xyz/sitemap.xml
+Sitemap: https://atullal.xyz/server-sitemap.xml
