@@ -8,6 +8,8 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { GitHubCard } from "@/app/_components/github-card";
+import Link from "next/link";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -17,6 +19,23 @@ export default async function Post({ params }: Params) {
   }
 
   const content = await markdownToHtml(post.content || "");
+
+  const getRepoPath = (url:any) => {
+    const githubUrl = new URL(url);
+    const path = githubUrl.pathname.slice(1).split('/');
+    return `${path[0]}/${path[1]}`;
+  };
+
+  const fetchRepoData = async (repoUrl: string) => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${getRepoPath(repoUrl)}`);
+      const repoData = await response.json();
+      return repoData;
+    } catch (error) {
+      console.error('Error fetching repository data:', error);
+      return null;
+    }
+  };
 
   return (
     <main>
@@ -30,6 +49,7 @@ export default async function Post({ params }: Params) {
             date={post.date}
             author={post.author}
           />
+          {post.github ? <GitHubCard repoData={await fetchRepoData(post.github)} /> : null}
           <PostBody content={content} />
         </article>
       </Container>
