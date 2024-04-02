@@ -1,5 +1,4 @@
 import markdownStyles from "./markdown-styles.module.css";
-import { MDXRemote } from "next-mdx-remote/rsc";
 
 type Props = {
   content: string;
@@ -7,10 +6,11 @@ type Props = {
 
 export function PostBody({ content }: Props) {
   return (
-    <div className="mx-auto max-w-2xl">
-      <div className={markdownStyles["markdown"]}>
-        <MDXRemote source={content} />
-      </div>
+    <div className="max-w-2xl mx-auto">
+      <div
+        className={markdownStyles["markdown"]}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </div>
   );
 }
