@@ -18,7 +18,7 @@ export default async function Post({ params }: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
+  // const content = await markdownToHtml(post.content || "");
 
   const getRepoPath = (url:any) => {
     const githubUrl = new URL(url);
@@ -50,7 +50,7 @@ export default async function Post({ params }: Params) {
             author={post.author}
           />
           {post.github ? <GitHubCard repoData={await fetchRepoData(post.github)} /> : null}
-          <PostBody content={content} />
+          <PostBody content={post.content} />
         </article>
       </Container>
     </main>

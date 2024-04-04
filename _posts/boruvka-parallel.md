@@ -11,24 +11,26 @@ ogImage:
   url: "/assets/blog/boruvka-parallel/cover.jpeg"
 ---
 During my research summer program at Georgia Tech, I implemented parallelization of Borůvka's algorithm to find the minimum spanning tree of an undirected graph. The idea was to implement a multithreaded program of Borůvka's algorithm using Java Habanero and compare its performance for the different number of threads and cores. Multithreading allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such a program is called a thread. So, threads are lightweight processes within a process. In Java Habanero, threads can be acquired by either extending the Thread class or implementing the Runnable interface.
-
-<h1>Problem statement</h1>
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$
+## Problem statement
 Finding the Minimum spanning tree in a data set using sequential implementation takes considerable time to accomplish in a relatively large data set, sometimes exponential, thereby leading to performance delay and utilization of memory for a longer time. The primitive method uses only a single thread of the system, does execute sequentially which leads other threads to remain idle. To decrease the overall task time, we try to utilize other threads as well, thus performing parallel computing.
 
 The idea is to apply the concept of parallel programming using Borůvka’s algorithm for finding the weight of MST and further, the execution time to do so for the data set provided. The program is going to detect and utilize all the threads available for performing the task. This will minimize the execution time considerably.
 The program also shows the relative speed bump due to parallelization as compared to the execution done sequentially.
 
-<h1>Borůvka's algorithm</h1>
+## Borůvka's algorithm
 Borůvka’s Algorithm is a way to find a minimum spanning tree — a spanning tree where the sum of edge weights is minimized. It was the first algorithm developed (in 1926) to find MSTs; Otakar Borůvka used it to find the most efficient routing for an electrical grid.
 
 There are many ways to find minimum spanning trees. Borůvka’s Algorithm is a greedy algorithm and is similar to Kruskal’s algorithm and Prim’s algorithm. It is basically a cross between the two algorithms. It is also known as Sollin’s algorithm, especially in computing.
 Borůvka’s algorithm is based on the merging of disjoint components. At the beginning of the procedure, each vertex is considered a separate component. In each step, the algorithm connects (merges) every component with some other using strictly the cheapest outgoing edge of the given component (every edge must have a unique weight). This way it is guaranteed that no cycle may occur in the spanning tree.
 
-Complexity of Borůvka’s algorithm is \\( O(\|E\|.log_{2}\|V\|) \\), where \\(E\\) is the number of edges, and \\(V\\)  is the number of vertices in \\(G\\)  (assuming \\( E ≥ V \\) )
+Complexity of Borůvka’s algorithm is $$\\( O(\|E\|.log_{2}\|V\|) \\)$$, where $$\\(E\\)$$ is the number of edges, and \\(V\\)  is the number of vertices in \\(G\\)  (assuming \\( E ≥ V \\) )
 
 A significant advantage of Borůvka’s algorithm is that it might be easily parallelized because the choice of the cheapest outgoing edge for each component is completely independent of the choices made by other components.
 
-<h1>Psuedo code</h1>
+## Psuedo code
 1) Input is a connected, weighted, and undirected graph.
 
 2) Initialize all vertices as individual components (or sets).
@@ -45,21 +47,21 @@ component to any other component.
 
 5) Return MST.
 
-<h1>Modules</h1>
+## Modules
 This implementation of Boruvka’s MST was built on JAVA and uses Habanero Java Library for parallelism. 
 Habanero-Java (HJ) is an innovative parallel programming model being developed at Rice University. Habanero-Java library (HJ-lib) is the new library implementation of HJ that can be used with any standard Java 8 implementation. The library-based approach is attractive since it does not require modifying a compiler as with language-based approaches.
 
 HJ integrates a wide range of parallel programming constructs (e.g., async tasks, futures, data-driven tasks, for all, barriers, phasers, transactions, actors) in a single programming model that enables unique combinations of these constructs (e.g., nested combinations of task and actor parallelism). The orthogonal classes of parallel constructs enable programmers with a basic knowledge of Java to get started quickly with expressing a wide range of parallel patterns. HJ is capable of expressing many different forms of parallel patterns including data parallelism, pipeline parallelism, stream parallelism, loop parallelism, and divide-and-conquer parallelism. 
 This code was tested on the High-Performance Multi-Core DaVinci system at Rice University. 
 
-<h1>Implementation</h1>
+## Implementation
 To handle threading in parallel MST algorithm, the concurrent linked queue is used, as the threads can access the queue concurrently without consequences. The program detects the number of threads available for computing and in the pattern of 1, 2, 4, 6, etc. threads and initiates them. Each thread acts as an individual sequential implementation. In the case of the parallel algorithm, each thread tries to obtain a lock on a node and once it acquires the lock, it tries to obtain the lock on the connected nodes while checking whether the same is pre-acquired by another thread or has been accounted for or not.
 
 According to the algorithm, the acquired nodes are added to the queue and finally, a single thread will contain the last node. All the threads are joined to get the final node’s total edges and weight, just like in a sequential algorithm. In this implementation, locks are used on components. Each thread gets a lock on the component in use. If the thread fails to obtain the lock, it signifies that another thread has already obtained the lock. Correctness of this implementation is achieved using a concurrent linked list and locks on components. This algorithm is deadlock-free, as any thread does not wait on the lock. The threads won’t get blocked on try lock, as it continues in case of failure, ensuring that the deadlock never occurs.
 
 If any thread tries to obtain the lock on one of its component’s lock and succeeds, then the thread further tries to obtain the lock on connected components, and in case of failure, it simply continues its computation instead of waiting to obtain the lock on that component to avoid deadlock. The try Lock methods are concealed in a while loop which helps different threads to avoid livelocks. Threads would release the component if it fails to obtain the lock and would try lock again in another while loop iteration to avoid multiple threads colliding for locks. If two threads try to obtain the lock on the same multiple components, it won’t get stuck in livelock as only one thread will obtain locks on all the components, because of the while loop, before the other thread even obtains a lock on any other component.
 
-<h1>Results</h1>
+## Results
 <h4><strong>A. Using DaVinci for Computing</strong></h4>
 
 **Sequential**
@@ -112,7 +114,7 @@ Single threaded test ran in 1931 ms, 0.64x faster than sequential on Local Syste
 
 4 threaded test ran in 1021 ms, 1.89x faster than single- threaded on Local System.
 
-<h1>Observations</h1>
+## Observations
 It seems that 10 threads on DaVinci machine was faster than 12 threads on the same machine.
 More number of threads doesn’t necessarily mean that the performance will increase.
 Although it is true for most of the cases, the reason behind this is the same as increasing the number of threads doesn't decrease the computation time in the same ratio.
