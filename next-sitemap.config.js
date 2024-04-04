@@ -6,7 +6,7 @@ module.exports = {
     exclude: ['/server-sitemap-index.xml'], // <= exclude here
     robotsTxtOptions: {
       additionalSitemaps: [
-        'https://atullal.xyz/server-sitemap-index.xml', // <==== Add here
+        (process.env.SITE_URL || 'https://atullal.xyz') + '/server-sitemap-index.xml', // <==== Add here
       ],
     },
     // ...other options
