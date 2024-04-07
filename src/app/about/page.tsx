@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../_components/header';
 import Container from '../_components/container';
-
+import GitHubCalendar from 'react-github-calendar';
 const AboutPage: React.FC = () => {
   return (
 
@@ -36,6 +36,8 @@ const AboutPage: React.FC = () => {
             <p className="text-lg text-gray-700">You can reach out to me at example@example.com</p>
             </section>
         </main>
+
+        <GitHubCalendar username="atullal" />
         </div>
       </Container>
     </main>

@@ -1,4 +1,5 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+
+import { EnvelopeIcon, MapPinIcon, LinkIcon, GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
 
 const Footer = () => {
   return (
@@ -12,11 +13,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-2">Atul Lal</h3>
           <p className="text-gray-500 flex items-center">
-            <FaEnvelope className="mr-2" />
+            <EnvelopeIcon className="h-5 w-5 mr-2" />
             atul.lal123@gmail.com
           </p>
           <p className="text-gray-500 flex items-center">
-            <FaMapMarkerAlt className="mr-2" />
+            <MapPinIcon className="h-5 w-5 mr-2" />
             Boston, MA, USA
           </p>
         </div>
@@ -27,21 +28,21 @@ const Footer = () => {
               href="#"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
-              <FaLinkedin className="mr-2" />
+              <LinkIcon className="h-5 w-5 mr-2" />
               LinkedIn
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
-              <FaGithub className="mr-2" />
+              <CodeBracketIcon className="h-5 w-5 mr-2" />
               GitHub
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-700 flex items-center"
             >
-              <FaTwitter className="mr-2" />
+              <GlobeAltIcon className="h-5 w-5 mr-2" />
               Twitter
             </a>
           </div>

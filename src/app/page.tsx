@@ -4,6 +4,7 @@ import  Header from "@/app/_components/header";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 import Blurs from "./blurs";
+import Subscribe from "./_components/subscribe";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -26,6 +27,7 @@ export default function Index() {
           excerpt={heroPost.excerpt}
         />
         {morePosts.length > 0 && <MoreStories title posts={morePosts} />}
+        <Subscribe />
       </Container>
     </main>
   );

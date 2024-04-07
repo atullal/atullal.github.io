@@ -55,7 +55,7 @@ const Blurs = () => {
   ];
 
   return (
-    <div className="absolute inset-0 z-[-1]">
+    <div className="absolute inset-0 z-[-1] overflow-x-clip">
       {gradients.map((gradient:Gradient, index) => (
         <div
           key={index}
