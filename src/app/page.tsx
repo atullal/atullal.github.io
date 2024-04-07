@@ -3,6 +3,7 @@ import { HeroPost } from "@/app/_components/hero-post";
 import  Header from "@/app/_components/header";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
+import Blurs from "./blurs";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -13,6 +14,7 @@ export default function Index() {
 
   return (
     <main>
+      <Blurs />
       <Container>
         <Header />
         <HeroPost
