@@ -19,6 +19,9 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        "neutral-50": "#fcf1db",
+        "neutral-200": "#ddc89f",
+        
       },
       spacing: {
         28: "7rem",

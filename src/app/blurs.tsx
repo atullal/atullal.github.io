@@ -1,3 +1,4 @@
+
 type Gradient = {
   left?: string | undefined;
   right?: string | undefined;
@@ -14,7 +15,6 @@ type Gradient = {
 }
 
 const Blurs = () => {
-
   const gradients: Gradient[] = [
     {
       left: "-200px",
@@ -28,7 +28,6 @@ const Blurs = () => {
       blur: 50,
       angle: 0,
     },
-
     {
       right: "5vw",
       top: "-100px",
@@ -40,11 +39,23 @@ const Blurs = () => {
       c2pos: 100,
       blur: 80,
       angle: 0,
+    },
+    {
+      left: "5vw",
+      top: "400px",
+      height: 600,
+      width: 600,
+      color1: "#b6ff9580",
+      c1pos: 0,
+      color2: "#b6ff9510",
+      c2pos: 100,
+      blur: 80,
+      angle: 0,
     }
   ];
 
   return (
-    <div className="absolute inset-0 z-[-1] overflow-hidden">
+    <div className="absolute inset-0 z-[-1]">
       {gradients.map((gradient:Gradient, index) => (
         <div
           key={index}
