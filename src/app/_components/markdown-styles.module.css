@@ -10,9 +10,22 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug font-extrabold;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug font-bold;
+}
+
+.markdown h4 {
+  @apply text-xl mt-6 mb-3 leading-snug font-bold; /* Adjust these values as needed */
+}
+
+.markdown code {
+  @apply bg-neutral-50 p-2 rounded; /* Basic style for inline code */
+}
+
+.markdown pre code {
+  /* Styles for code blocks */
+  @apply bg-neutral-50 p-4 rounded; /* Example styles */
 }

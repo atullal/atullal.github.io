@@ -10,6 +10,7 @@ import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { GitHubCard } from "@/app/_components/github-card";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -18,9 +19,9 @@ export default async function Post({ params }: Params) {
     return notFound();
   }
 
-  // const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post.content || "");
 
-  const getRepoPath = (url:any) => {
+  const getRepoPath = (url: any) => {
     const githubUrl = new URL(url);
     const path = githubUrl.pathname.slice(1).split('/');
     return `${path[0]}/${path[1]}`;
@@ -39,7 +40,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <main>
-      <Alert/>
+      <Alert />
       <Container>
         <Header />
         <article className="mb-32">
@@ -50,7 +51,36 @@ export default async function Post({ params }: Params) {
             author={post.author}
           />
           {post.github ? <GitHubCard repoData={await fetchRepoData(post.github)} /> : null}
-          <PostBody content={post.content} />
+
+          <div className="max-w-2xl mx-auto">
+            <PostBody content={content} />
+          </div>
+        <div className="max-w-2xl mx-auto mt-12 rounded-2xl bg-neutral-500 px-8 py-8 text-white">
+          <div className="flex flex-wrap items-start sm:flex-nowrap sm:space-x-6">
+            <div className="relative mt-1 h-150 w-150 flex-shrink-0 text-align-center">
+              <a href="/author/mario-sanchez">
+              <Image
+                src={'/assets/blog/authors/atullal.jpeg'}
+                alt={`Image of Atul Lal`}
+                className="rounded-full object-cover"
+                width={150}
+                height={150}
+              />
+              </a>
+            </div>
+            <div>
+              <div className="mb-3">
+                <h3 className="text-lg font-medium text-white">About Atul Lal</h3>
+              </div>
+              <div>
+                <p>Mario is a Staff Engineer specialising in Frontend at <a href="https://vercel.com/" rel="noopener" target="_blank" className="text-neutral-50">Vercel</a>, as well as being a co-founder of Acme and the content management system Sanity. Prior to this, he was a Senior Engineer at Apple.</p>
+              </div>
+              <div className="mt-3">
+                <a className="bg-brand-secondary/20 rounded-full py-2 text-sm text-neutral-50" href="/about">View Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
         </article>
       </Container>
     </main>

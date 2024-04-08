@@ -11,9 +11,7 @@ ogImage:
   url: "/assets/blog/boruvka-parallel/cover.jpeg"
 ---
 During my research summer program at Georgia Tech, I implemented parallelization of Borůvka's algorithm to find the minimum spanning tree of an undirected graph. The idea was to implement a multithreaded program of Borůvka's algorithm using Java Habanero and compare its performance for the different number of threads and cores. Multithreading allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such a program is called a thread. So, threads are lightweight processes within a process. In Java Habanero, threads can be acquired by either extending the Thread class or implementing the Runnable interface.
-$$
-L = \frac{1}{2} \rho v^2 S C_L
-$$
+
 ## Problem statement
 Finding the Minimum spanning tree in a data set using sequential implementation takes considerable time to accomplish in a relatively large data set, sometimes exponential, thereby leading to performance delay and utilization of memory for a longer time. The primitive method uses only a single thread of the system, does execute sequentially which leads other threads to remain idle. To decrease the overall task time, we try to utilize other threads as well, thus performing parallel computing.
 
@@ -26,7 +24,8 @@ Borůvka’s Algorithm is a way to find a minimum spanning tree — a spanning t
 There are many ways to find minimum spanning trees. Borůvka’s Algorithm is a greedy algorithm and is similar to Kruskal’s algorithm and Prim’s algorithm. It is basically a cross between the two algorithms. It is also known as Sollin’s algorithm, especially in computing.
 Borůvka’s algorithm is based on the merging of disjoint components. At the beginning of the procedure, each vertex is considered a separate component. In each step, the algorithm connects (merges) every component with some other using strictly the cheapest outgoing edge of the given component (every edge must have a unique weight). This way it is guaranteed that no cycle may occur in the spanning tree.
 
-Complexity of Borůvka’s algorithm is $$\\( O(\|E\|.log_{2}\|V\|) \\)$$, where $$\\(E\\)$$ is the number of edges, and \\(V\\)  is the number of vertices in \\(G\\)  (assuming \\( E ≥ V \\) )
+Complexity of Borůvka’s algorithm is $O(|E| \cdot \log_2 |V|)$, where $E$ is the number of edges, and $V$ is the number of vertices in $G$ (assuming $E \geq V$)
+
 
 A significant advantage of Borůvka’s algorithm is that it might be easily parallelized because the choice of the cheapest outgoing edge for each component is completely independent of the choices made by other components.
 

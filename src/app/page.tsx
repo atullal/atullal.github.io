@@ -8,7 +8,6 @@ import Subscribe from "./_components/subscribe";
 
 export default function Index() {
   const allPosts = getAllPosts();
-  console.log(allPosts.map(post => post.slug));
 
   const heroPost = allPosts[0];
 
