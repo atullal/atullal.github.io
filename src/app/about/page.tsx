@@ -64,8 +64,13 @@ Want to talk tech, art, or the latest blockbuster?
             <p className="text-lg text-gray-700">Tossing my GitHub contribution graph up here to gently shame myself into coding more! 🌟💻 </p><br/>
         <Contribution />
             </section>
+            <br/><br/>
 
+            <section>
+            <h2 className="text-xl font-semibold mb-4">Interests</h2>
+            <p className="text-lg text-gray-700">Explore my interests in movies, music, and art. </p><br/>
         <Interests />
+            </section>
         </div>
       </Container>
     </main>
