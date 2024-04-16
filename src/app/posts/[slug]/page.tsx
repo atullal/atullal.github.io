@@ -57,7 +57,7 @@ export default async function Post({ params }: Params) {
         <div className="max-w-2xl mx-auto mt-12 rounded-2xl bg-neutral-500 px-8 py-8 text-white">
           <div className="flex flex-wrap items-start sm:flex-nowrap sm:space-x-6">
             <div className="relative mt-1 h-150 w-150 flex-shrink-0 text-align-center">
-              <a href="/author/mario-sanchez">
+              <a href="/about">
               <Image
                 src={'/assets/blog/authors/atullal_large.png'}
                 alt={`Image of Atul Lal`}

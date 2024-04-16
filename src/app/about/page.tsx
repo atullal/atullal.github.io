@@ -5,6 +5,7 @@ import Container from '../_components/container';
 import Contribution from '../_components/contribution';
 import Cards from '../_components/cards';
 import Image from "next/image";
+import Interests from '../_components/interests';
 const AboutPage: React.FC = () => {
   return (
 
@@ -41,6 +42,7 @@ const AboutPage: React.FC = () => {
 
 
 
+<Cards />
             <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">Background</h2>
             <p className="text-lg text-gray-700">
@@ -63,7 +65,7 @@ Want to talk tech, art, or the latest blockbuster?
         <Contribution />
             </section>
 
-        <Cards />
+        <Interests />
         </div>
       </Container>
     </main>
