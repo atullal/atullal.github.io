@@ -22,7 +22,7 @@ const Cards = () => {
                             </div>
     
                             <div className="flex -mb-8 py-8 border-t border-gray-200 dark:border-gray-800">
-    <a href="#" download="/" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#0077b5] hover:bg-[#005582] active:bg-[#004471] flex items-center text-sm h-8 px-3.5 justify-center">
+    <a href="https://www.linkedin.com/in/atullal123" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#0077b5] hover:bg-[#005582] active:bg-[#004471] flex items-center text-sm h-8 px-3.5 justify-center">
         <span>Connect</span>
     </a>
 </div>
@@ -42,7 +42,7 @@ const Cards = () => {
                             </div>
     
                             <div className="flex -mb-8 py-8 border-t border-gray-200 dark:border-gray-800">
-    <a href="#" download="/" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#333] hover:bg-[#24292e] active:bg-[#2c2f31] flex items-center text-sm h-8 px-3.5 justify-center">
+    <a href="https://www.github.com/atullal" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#333] hover:bg-[#24292e] active:bg-[#2c2f31] flex items-center text-sm h-8 px-3.5 justify-center">
         <span>Check out</span>
     </a>
 </div>
@@ -59,7 +59,7 @@ const Cards = () => {
                             <div className="mt-6 pb-6 rounded-b-[--card-border-radius]">
                                 <p className="text-gray-700 dark:text-gray-300">Drop a hey in my mailbox.</p>
                             </div><div className="flex gap-3 -mb-8 py-8 border-t border-gray-200 dark:border-gray-800">
-    <a href="#" download="/" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#D93025] hover:bg-[#C5221F] active:bg-[#B31E1A] flex items-center text-sm h-8 px-3.5 justify-center">
+    <a href="mailto:atul.lal123@gmail.com" className="w-full rounded-xl disabled:border *:select-none [&>*:not(.sr-only)]:relative *:disabled:opacity-20 disabled:text-gray-950 disabled:border-gray-200 disabled:bg-gray-100 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white text-white bg-[#D93025] hover:bg-[#C5221F] active:bg-[#B31E1A] flex items-center text-sm h-8 px-3.5 justify-center">
         <span>Mail</span>
     </a>
 
