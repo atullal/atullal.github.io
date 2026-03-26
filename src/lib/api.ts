@@ -20,9 +20,21 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
-  const posts = slugs
+  let posts = slugs
     .map((slug) => getPostBySlug(slug))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+  if (process.env.NODE_ENV !== "development") {
+    // In production, only show posts that are explicitly published or not marked as draft
+    posts = posts.filter((post) => {
+      // If it's explicitly marked as published: false, hide it
+      if (post.published === false) return false;
+      // If it's explicitly marked as draft: true, hide it
+      if (post.draft === true) return false;
+      return true;
+    });
+  }
+
   return posts;
 }

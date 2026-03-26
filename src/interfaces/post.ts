@@ -12,5 +12,7 @@ export type Post = {
   };
   content: string;
   preview?: boolean;
+  draft?: boolean;
+  published?: boolean;
   github?: string;
 };
