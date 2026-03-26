@@ -59,15 +59,6 @@ const Header = () => {
 
       {/* Navigation Menu for Larger Screens */}
       <nav className="hidden md:flex md:items-center md:space-x-4">
-{/* Search Bar for Larger Screens */}
-<div className="relative flex">
-  <input
-    type="text"
-    placeholder="Search..."
-    className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-blue-300"
-  />
-</div>
-
 
         <div>
           <Link
@@ -149,14 +140,6 @@ const Header = () => {
                 >
                   Projects
                 </Link>
-              </div>
-              {/* Search Bar */}
-              <div className="mt-8">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="w-full border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300"
-                />
               </div>
             </nav>
           </div>
