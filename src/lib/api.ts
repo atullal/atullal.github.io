@@ -20,9 +20,15 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
-  const posts = slugs
+  let posts = slugs
     .map((slug) => getPostBySlug(slug))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+  if (process.env.NODE_ENV === "production") {
+    posts = posts.filter(
+      (post) => post.draft !== true && post.published !== false
+    );
+  }
   return posts;
 }

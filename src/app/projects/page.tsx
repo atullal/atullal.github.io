@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '../_components/container';
 import Header from '../_components/header';
 import { PostTitle } from '../_components/post-title';
@@ -18,7 +19,7 @@ const ProjectsPage: React.FC = () => {
         <div key={project.id} className="rounded-lg shadow-md bg-white overflow-hidden mb-8">
           <div className="flex">
             <div className="flex-none w-56 relative">
-              <img src={project.image} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              <Image src={project.image} alt="" fill className="object-cover" loading="lazy" />
             </div>
             <div className="flex-auto p-6 pl-8">
               <h1 className="text-lg font-semibold mb-2">{project.title}</h1>
