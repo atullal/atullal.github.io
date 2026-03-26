@@ -1,5 +1,5 @@
 ---
-title: "NFTs and the problems with ethereum blockchain"
+title: "NFTs and the Problems with the Ethereum Blockchain"
 excerpt: "This technical article delves into NFTs and challenges associated with the Ethereum blockchain, including scalability, high gas fees, environmental concerns, fragmentation, and security vulnerabilities. It also discusses potential solutions like layer 2 scaling, alternative blockchains, cross-chain interoperability, sustainable consensus mechanisms, and standardization efforts to create a more robust and accessible NFT ecosystem."
 coverImage: "/assets/blog/problems-with-eth/cover.png"
 date: "2021-10-03T05:35:07.322Z"
@@ -10,48 +10,79 @@ author:
 ogImage:
   url: "/assets/blog/problems-with-eth/cover.png"
 ---
-Non-fungible tokens (NFTs) have gained significant traction in recent years, offering a wide range of applications from digital art to virtual real estate. While Ethereum has been the leading platform for creating and managing NFTs, it is not without its challenges. In this article, we will delve into the technical aspects of NFTs and discuss the problems associated with the Ethereum blockchain.
 
-## NFTs: A Brief Overview
-NFTs are unique digital tokens that represent ownership of a specific digital asset, differentiating them from cryptocurrencies like Bitcoin or Ether, which are fungible and interchangeable. NFTs are created using the ERC-721 or ERC-1155 token standards, which define a set of rules for the creation, management, and transfer of non-fungible tokens on the Ethereum blockchain.
+Non-fungible tokens (NFTs) have gained massive, mainstream traction in recent years, offering a wide range of applications from digital art to virtual real estate and gaming items.
+
+While <a href="https://ethereum.org/en/" target="_blank" class="tooltip">Ethereum<span class="tooltip-content">A decentralized, open-source blockchain with smart contract functionality. The second-largest cryptocurrency by market capitalization after Bitcoin.</span></a> has been the undisputed leading platform for creating and managing NFTs, it is certainly not without its severe architectural challenges. In this article, we will delve into the technical aspects of NFTs and discuss the glaring scaling problems associated with the Ethereum mainnet.
+
+## NFTs: A Brief Technical Overview
+
+NFTs are unique digital tokens that represent immutable ownership of a specific digital asset, differentiating them fundamentally from cryptocurrencies like Bitcoin or Ether, which are *fungible* and interchangeable.
+
+<div class="post-it">
+  <strong>The Standards:</strong> NFTs are primarily created using the <strong>ERC-721</strong> (single unique item) or <strong>ERC-1155</strong> (multi-token standard for batches) smart contract standards. These define a strict set of rules for the creation, management, and transfer of non-fungible tokens on the Ethereum blockchain.
+</div>
 
 ## Challenges Associated with Ethereum Blockchain
 
-1. Scalability
+### 1. Scalability Bottlenecks
 
-    One of the most pressing issues with Ethereum is its limited scalability. Currently, Ethereum can process around 30 transactions per second (TPS), which is insufficient to handle the increasing demand for NFTs. This limitation stems from Ethereum's consensus mechanism, Proof of Work (PoW), which requires miners to compete in solving complex mathematical problems to validate transactions and add new blocks to the blockchain.
+One of the most pressing issues with Ethereum (Layer 1) is its incredibly limited scalability. Currently, Ethereum can process around <span class="highlighter">15 to 30 transactions per second (TPS)</span>. This is simply insufficient to handle the increasing global demand for NFTs.
 
-    The upcoming Ethereum 2.0 upgrade aims to address this issue by transitioning to a Proof of Stake (PoS) consensus mechanism, which should significantly increase the network's throughput. However, it remains uncertain when the complete transition will occur and whether it will be sufficient to accommodate the growing NFT market.
+This limitation traditionally stemmed from Ethereum's original consensus mechanism, Proof of Work (PoW), which required miners to compete in solving complex mathematical problems to validate transactions. *(Note: Since this writing, "The Merge" has transitioned Ethereum to Proof of Stake, but L1 TPS remains intentionally constrained to preserve node decentralization).*
 
-2. High Gas Fees
+### 2. High Gas Fees
 
-    Ethereum's PoW consensus mechanism and limited scalability have resulted in high transaction fees, known as gas fees. NFT creators and collectors must pay these fees for minting, transferring, or interacting with NFTs on the Ethereum network. During periods of high network congestion, gas fees can skyrocket, pricing out smaller creators and collectors and limiting the accessibility of NFTs.
+Because Ethereum block space is highly limited, transaction fees (known as gas fees) operate on an auction model.
 
-3. Environmental Concerns
+<div class="doodle">
+  *Gas Wars:* Have you ever tried to buy a $20 NFT but the network demanded a $150 transaction fee? That's a gas war, pricing out 99% of normal users! ⛽💥
+</div>
 
-    The PoW consensus mechanism employed by Ethereum is energy-intensive, as it requires miners to use powerful computing hardware to compete for block rewards. This has raised concerns about the environmental impact of Ethereum and, by extension, NFTs. While the transition to Ethereum 2.0's PoS consensus mechanism should alleviate these concerns, the timeline and final outcome remain uncertain.
+NFT creators and collectors must pay these fees for minting, transferring, or interacting with smart contracts. During periods of high network congestion (like a highly anticipated NFT drop), gas fees can skyrocket astronomically, pricing out smaller creators and destroying the micro-transaction economy.
 
-4. Fragmented NFT Ecosystem
+### 3. The Fragmented Ecosystem
 
-    The NFT ecosystem on Ethereum is fragmented, with multiple marketplaces, wallets, and platforms that often lack interoperability. This fragmentation makes it difficult for users to manage and interact with their NFTs seamlessly, creating friction in the user experience. Moreover, it raises concerns about the long-term sustainability and accessibility of NFTs stored on specific platforms, which may become obsolete or cease to exist.
+The NFT ecosystem on Ethereum is highly fragmented. We have multiple marketplaces (OpenSea, LooksRare, Blur), wallets, and platforms that often lack direct interoperability.
 
-5. Security and Smart Contract Vulnerabilities
+This fragmentation makes it difficult for average users to manage and interact with their NFTs seamlessly, creating massive friction in the UX. Moreover, it raises concerns about the long-term sustainability of NFTs whose metadata is stored on centralized, platform-specific servers (AWS) rather than decentralized storage like IPFS or Arweave.
 
-    NFTs are created and managed using smart contracts, which are self-executing agreements encoded on the blockchain. While smart contracts offer numerous benefits, they can also be susceptible to vulnerabilities and exploits if not properly designed and audited. NFT creators and collectors must be aware of potential security risks and ensure that the smart contracts they interact with have been thoroughly reviewed and tested.
+### 4. Security and Smart Contract Vulnerabilities
 
+NFTs are created and managed using smart contracts, which are self-executing agreements encoded on the blockchain. While smart contracts offer "trustless" execution, they are only as secure as the developer who wrote them.
+
+Smart contracts can be highly susceptible to logic vulnerabilities and exploits (e.g., re-entrancy attacks) if not properly audited. If an NFT contract is exploited, the tokens can be stolen or permanently locked, and because blockchains are immutable, there is no "undo" button or customer service to call.
 
 ## Possible Solutions and Alternatives
-To address the challenges posed by Ethereum, several solutions and alternatives are being explored, including:
 
-1. Layer 2 Solutions: These are off-chain scaling solutions built on top of Ethereum, such as Polygon, Optimism, and zkSync, which offer increased throughput and lower transaction fees. These solutions enable a more efficient and cost-effective NFT ecosystem without migrating away from Ethereum.
+To address the severe challenges posed by Ethereum Layer 1, several robust solutions and alternatives are actively being explored and adopted:
 
-2. Alternative Blockchains: Several blockchains, such as Binance Smart Chain, Solana, and Flow, have emerged as viable alternatives to Ethereum for NFT creation and management. These blockchains offer improved scalability, reduced transaction fees, and innovative features tailored to the NFT ecosystem. However, each of these platforms has its trade-offs, such as centralization concerns in the case of Binance Smart Chain or lower adoption rates compared to Ethereum.
+1. **Layer 2 Rollups:** These are off-chain scaling solutions built *on top* of Ethereum, such as <a href="https://polygon.technology/" target="_blank" class="tooltip">Polygon<span class="tooltip-content">A protocol and a framework for building and connecting Ethereum-compatible blockchain networks.</span></a>, Optimism, and Arbitrum. They bundle thousands of transactions off-chain and post cryptographic proofs back to Ethereum L1. This offers massive throughput and pennies in transaction fees without sacrificing Ethereum's underlying security.
 
-3. Cross-Chain Solutions: Interoperability between different blockchains is an essential aspect of creating a more unified and accessible NFT ecosystem. Cross-chain solutions, such as Polkadot, Cosmos, and Avalanche, aim to enable seamless communication between different blockchain networks, allowing NFTs to be transferred and managed across various platforms. This increased interoperability will make it easier for users to interact with NFTs, regardless of the blockchain they are stored on.
+2. **Alternative Blockchains (Alt-L1s):** Several competing blockchains, such as Solana, Avalanche, and Flow, have emerged as highly viable alternatives for high-frequency NFT creation (like gaming). These blockchains offer improved L1 scalability and sub-second finality. However, each has trade-offs, such as higher centralization risks or frequent network outages.
 
-4. Sustainable Consensus Mechanisms: As the environmental impact of PoW consensus mechanisms becomes a growing concern, alternative consensus mechanisms like PoS, Delegated Proof of Stake (DPoS), and Proof of Authority (PoA) are gaining traction. These consensus mechanisms are significantly more energy-efficient than PoW, offering a more sustainable foundation for NFT ecosystems.
+<div class="post-it">
+  <strong>The Trilemma:</strong> Remember the Blockchain Trilemma! You can only optimize for two: Decentralization, Security, and Scalability. Alt-L1s usually sacrifice some decentralization for speed. 📐
+</div>
 
-5. Standardization and Interoperability: The development of standardized protocols and tools for NFT creation, management, and exchange will be crucial for a more cohesive NFT ecosystem. Projects like the InterNFT Working Group are working to develop cross-chain standards and promote interoperability between different NFT platforms, making it easier for users to navigate the fragmented NFT landscape.
+3. **Cross-Chain Interoperability:** Interoperability between different blockchains is essential. Cross-chain messaging protocols, such as LayerZero or Cosmos IBC, aim to enable seamless communication between different isolated networks, allowing an NFT minted on Ethereum to be utilized in a game running on Solana.
+
+4. **Decentralized Storage:** Pushing the ecosystem to utilize <span class="highlighter">IPFS (InterPlanetary File System)</span> or Arweave to permanently store the actual image/video data, ensuring the NFT doesn't point to a dead "404 Not Found" HTTP link in five years.
 
 ## Conclusion
-While NFTs have generated significant interest and excitement, the Ethereum blockchain's limitations pose substantial challenges for the continued growth and sustainability of the NFT ecosystem. Scalability, high gas fees, environmental concerns, fragmentation, and security vulnerabilities are all critical issues that must be addressed. Emerging solutions, such as layer 2 scaling, alternative blockchains, cross-chain interoperability, sustainable consensus mechanisms, and standardization efforts, offer promising avenues for overcoming these challenges and paving the way for a more robust and accessible NFT ecosystem.
+
+While NFTs have generated significant interest and excitement, the Ethereum blockchain's inherent L1 limitations pose substantial UX and financial challenges for mainstream adoption.
+
+Scalability, high gas fees, metadata fragmentation, and smart contract security vulnerabilities are all critical issues. However, the future is bright! Emerging solutions—specifically Zero-Knowledge (ZK) Layer 2 rollups and cross-chain interoperability standards—offer incredibly promising avenues for overcoming these challenges, paving the way for a robust, accessible, and cheap digital ownership ecosystem.
+
+<div class="citations">
+  <h3>References & Citations</h3>
+  <ol>
+    <li>
+      Entriken, W., et al. (2018). "ERC-721 Non-Fungible Token Standard". <em>Ethereum Improvement Proposals</em>. <a href="https://eips.ethereum.org/EIPS/eip-721">Link</a>
+    </li>
+    <li>
+      Buterin, V. (2021). "A rollup-centric ethereum roadmap". <em>Ethereum Magicians</em>.
+    </li>
+  </ol>
+</div>

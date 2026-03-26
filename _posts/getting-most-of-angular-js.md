@@ -10,74 +10,112 @@ author:
 ogImage:
   url: "/assets/blog/getting-most-of-angular-js/cover.png"
 ---
-[Angular JS][angular-link] has been out for a long time, October 2010 to be precise and it has made a huge impact in the industry (albeit not as much as ReactJS). A lot has changed since then, what Angular JS claimed to be its core features is now very commonly used by many other modern frameworks, some have even improved upon it. Having said that, there are still many large-scale applications using Angular JS for its maturity and long-term support. When Angular JS launched, it offered a lot of functionality like component-based architecture, two-way data binding, etc. to name a few, but these patterns have become common in the industry now. Angular JS has stopped supporting security patches and bug fixes in favor of newer frameworks. It can be challenging to use Angular JS in the modern web application, but it is not impossible. Here are a few tips and tricks to get the most out of Angular JS, that I learned over the course of my internship.
 
-## Optimising ng-repeat directive
-There are a few tricks to optimize ng-repeat, one of which being ‘track by’ functionality. This reduces DOM manipulations, by reducing the rendering of elements to the ones that have already been rendered. We should also avoid using filters inside loops.
+<a href="https://angularjs.org/" target="_blank" class="tooltip">Angular JS<span class="tooltip-content">A JavaScript-based open-source front-end web framework mainly maintained by Google. Released in October 2010.</span></a> has been out for a long time—October 2010 to be precise—and it has made a monumental impact on the industry. A lot has changed since then. What Angular JS originally claimed as its core features are now common table stakes used by almost all modern frameworks, and many have vastly improved upon the original design.
+
+<div class="doodle">
+  *Throwback:* Remember when two-way data binding felt like actual magic? ✨
+</div>
+
+Having said that, there are still many large-scale legacy applications using Angular JS due to its historical maturity. When Angular JS launched, it offered functionalities like component-based architecture and two-way data binding that revolutionized frontend dev. However, <span class="highlighter">Angular JS has stopped supporting security patches and bug fixes</span> in favor of the newer Angular (v2+) framework.
+
+It can be challenging to maintain or update Angular JS in a modern web application, but it is not impossible. Here are a few tips and tricks to get the most out of Angular JS, which I learned over the course of my internship.
+
+## Optimizing the `ng-repeat` directive
+
+There are a few crucial tricks to optimize `ng-repeat`, the most important of which is the **‘track by’** functionality.
+
+<div class="post-it">
+  <strong>Performance Tip:</strong> Without `track by`, Angular destroys and recreates DOM elements whenever the array changes, even if the elements are identical! 😱
+</div>
+
+Using `track by` reduces expensive DOM manipulations by only re-rendering elements that have actually changed based on a unique identifier. We should also strongly avoid using filters directly inside `ng-repeat` loops, as they are evaluated on every digest cycle.
+
 ```html
-<!-- Commonly used ng-repeat  -->
+<!-- The sluggish, commonly used ng-repeat  -->
 <div ng-repeat="item in items">
  {{ item.property }}
 </div>
 
-<!-- ng-repeat with track by  -->
+<!-- The optimized ng-repeat with track by  -->
 <div ng-repeat="item in items track by item.id">
  {{ item.property }}
-</code>
-
+</div>
 ```
 
+## Avoiding Unnecessary Two-Way Binding
 
-## Avoiding two-way binding
-One of the best features of Angular JS is [two-way binding][two-way-link], but you might not need it every time. This happens more frequently than most might suspect. When utilizing Angular, two-way binding regularly isn’t required: you can tie, rather, just one time the expressions between wavy sections in your template formats by utilizing the following syntax.
+One of the most famous features of Angular JS is <a href="https://docs.angularjs.org/tutorial/step_06" target="_blank" class="tooltip">two-way data binding<span class="tooltip-content">Automatic synchronization of data between the model and view components.</span></a>, but you might not actually need it every time!
 
-```javascript
-<!-- Appending :: before the expression  -->
+In fact, you need it less frequently than you might suspect. Unnecessary two-way binding clogs up the `$watch` list and slows down the digest cycle. Instead, you can bind an expression **just one time** between the curly braces in your templates by utilizing the `::` syntax.
+
+```html
+<!-- Appending :: before the expression for one-time binding -->
 {{:: itemExpression}}
 ```
 
-## Using filters in JS
-Filters can be very useful in templates but sometimes you can come across a use case where you need to use filters inside your Javascript factory or Component or Service. When you do require a filter in your Javascript though, don’t panic use this to get your work done. Inject `$filter` in your JS file and use this syntax.
+## Using Filters in JavaScript Controllers
+
+Filters can be very useful in templates, but sometimes you come across a use case where you need to use filters inside your JavaScript factory, Component, or Service.
+
+<div class="doodle">
+  *Code Hack:* Don't duplicate your formatting logic! Just inject `$filter` into your JS file. 🛠️
+</div>
+
+When you require a filter in your JavaScript, don’t panic or rewrite the logic. Inject `$filter` and use this syntax:
 
 ```javascript
-function myCtrl($scope, $filter)
-{
-    $filter('filterName')(args);
+function myCtrl($scope, $filter) {
+    // Call the filter programmatically
+    var formattedData = $filter('filterName')(args);
 }
 ```
 
-## Use Service to share data between controllers
-You can sometimes have two or more views in various routes that need access to some shared variable or you may have various segments which need access to a similar bit of information.
+## Use Services to Share Data Between Controllers
 
-In such cases, the best way to deal with sharing information between controllers is by making a shared service for this. See the example below.
+You can sometimes have two or more views in various routes that need access to a shared variable, or you may have various segments which need access to a similar bit of information.
+
+In such cases, the cleanest and most scalable way to deal with sharing information between controllers is by creating a shared service. Relying on `$rootScope` is an anti-pattern. See the example below:
 
 ```javascript
 var myAngularApp = angular.module("myAngularApp");
  
 myApp.controller("controller1", ['$scope', 'appService',
     function ($scope, appService) {
-    $scope.resource = appService.getSharedResource();
-  }
+        $scope.resource = appService.getSharedResource();
+    }
 ]);
  
 myApp.controller("controller2", ['$scope', 'appService',
     function ($scope, appService) {
-    $scope.resource = appService.getSharedResource();
-  }
+        $scope.resource = appService.getSharedResource();
+    }
 ]);
 ```
 
-## Simple way to debounce input fields
-With the new Angular JS version, we have the ‘debounce’ option in the `ng-model-options` directive. You can simply use the syntax given below to achieve debounce functionality simply and efficiently.
+## Simple Way to Debounce Input Fields
+
+With the newer versions of Angular JS (1.3+), we finally got the `debounce` option natively in the `ng-model-options` directive. You can simply use the syntax given below to achieve debounce functionality without writing custom timeout functions or importing Lodash.
 
 ```html
+<!-- Waits 500ms after the user stops typing before updating the model -->
 <input ng-model="searchValue" ng-model-options="{debounce: 500}"/>
 ```
-<br/>
-Even though Angular JS might not be a good choice of the framework on a modern web application, because it doesn’t receive security updates, as it recently lost support, but if you are stuck with it or if you need Angular JS, we can achieve almost same functionality similar to the modern framework through best practices and putting some research and effort. Angular JS can provide an easy gateway for many newcomers, if they want to step into the wide world of Web Application development, and could even help you in big enterprises which are using Angular JS for their MVP.
 
-Check out the [AngularJS Documentation][angularjs-docs] for more info on how to get the most out of AngularJS.
+## Conclusion
 
-[angularjs-docs]: https://docs.angularjs.org/guide
-[angular-link]: https://angularjs.org/
-[two-way-link]: https://docs.angularjs.org/tutorial/step_06
+Even though Angular JS might not be the go-to framework for a modern web application today (especially since it recently lost official support), if you are stuck maintaining a legacy codebase, you can still achieve excellent performance.
+
+By applying best practices, putting in some research, and keeping the `$digest` cycle lean, Angular JS can still perform admirably.
+
+<div class="citations">
+  <h3>References & Citations</h3>
+  <ol>
+    <li>
+      AngularJS Official Documentation. <a href="https://docs.angularjs.org/guide">Developer Guide</a>.
+    </li>
+    <li>
+      Misko Hevery (2010). "Hello World, AngularJS". (The genesis of two-way binding in JS frameworks).
+    </li>
+  </ol>
+</div>
