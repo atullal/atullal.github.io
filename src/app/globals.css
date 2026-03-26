@@ -22,3 +22,107 @@ body {
 article a {
     color: #54b1ff;
 }
+/* Custom UI Elements for Blog Posts */
+
+/* Post-it Notes */
+.post-it {
+    background-color: #fdfd96;
+    border: 1px solid #e8e8e8;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    transform: rotate(-1deg);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    color: #333;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-right-radius: 60px 5px;
+}
+
+/* Highlighter Effect */
+.highlighter {
+    background: linear-gradient(104deg, rgba(255,255,0,0) 0.9%, rgba(255,255,0,1) 2.4%, rgba(255,255,0,0.5) 5.8%, rgba(255,255,0,0.8) 93%, rgba(255,255,0,0) 96%);
+    padding: 0 0.2rem;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Doodles */
+.doodle {
+    border: 2px dashed #ff6b6b;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 107, 107, 0.05);
+    font-style: italic;
+    color: #d63031;
+}
+
+/* Tooltip/Hover Dialog Box */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #54b1ff;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 250px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -125px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 0.85rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Citations at the bottom */
+.citations {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eaeaea;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.citations ol {
+    padding-left: 1.5rem;
+}
+
+.citations li {
+    margin-bottom: 0.5rem;
+}
