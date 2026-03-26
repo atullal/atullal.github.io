@@ -38,12 +38,11 @@ const ResumePage: React.FC = () => {
           <h3 className="text-lg font-semibold">Commvault Systems, Bangalore, India</h3>
           <p className="text-gray-700">Software Engineer | July 2020 – August 2022</p>
           <ul className="list-disc list-inside">
-            <li>Improved user experience by...</li>
-            <li>Achieved a 50% reduction in disk space usage and 2x faster alert delivery by...</li>
-            <li>Engineered a Kafka and Redis-based alert microservice using Go for Commvault’s Metallic SaaS...</li>
+            <li>Improved user experience.</li>
+            <li>Achieved a 50% reduction in disk space usage and 2x faster alert delivery.</li>
+            <li>Engineered a Kafka and Redis-based alert microservice using Go for Commvault’s Metallic SaaS.</li>
           </ul>
         </div>
-        {/* Additional experiences go here */}
       </section>
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Education</h2>
@@ -52,19 +51,17 @@ const ResumePage: React.FC = () => {
           <p className="text-gray-700">Master of Science in Computer Science | September 2022 - January 2024</p>
           <p>GPA – 3.91/4.00</p>
           <ul className="list-disc list-inside">
-            <li>Teaching Assistant, DS 310 Data Mechanics: Focused on...</li>
-            <li>Relevant Coursework: Distributed Systems, Stream Processing Systems, Graduate Computer Networks...</li>
+            <li>Teaching Assistant, DS 310 Data Mechanics</li>
+            <li>Relevant Coursework: Distributed Systems, Stream Processing Systems, Graduate Computer Networks</li>
           </ul>
         </div>
-        {/* Additional education goes here */}
       </section>
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Academic Projects</h2>
         <div className="mb-4">
           <h3 className="text-lg font-semibold">Causal Profiling in Microservice Environment</h3>
-          <p>Authored research paper focusing on causal profiling and what-if analysis of microservice architectures...</p>
+          <p>Authored research paper focusing on causal profiling and what-if analysis of microservice architectures.</p>
         </div>
-        {/* Additional projects go here */}
       </section>
     </div>
 

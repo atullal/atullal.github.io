@@ -10,7 +10,7 @@ const Card = ({ title, imageUrl, content, extraContent, link, color }:any) => (
         backgroundPosition: 'top right'
       }}
     >
-      <img src={imageUrl} alt="Placeholder" className="flex-none w-80 h-80 rounded-md object-cover" />
+      <img src={imageUrl} alt={title} className="flex-none w-80 h-80 rounded-md object-cover" />
       <div className="flex-grow px-4 py-2">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-gray-700 text-base" dangerouslySetInnerHTML={{ __html: content }}></p>
