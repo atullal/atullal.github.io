@@ -1,3 +1,5 @@
+'use client'
+
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 
 export default function Subscribe() {
@@ -10,7 +12,7 @@ export default function Subscribe() {
             <p className="mt-4 text-lg leading-8 text-gray-300">
               Stay up to date with the latest articles on distributed systems, cloud computing, and software engineering.
             </p>
-            <div className="mt-6 flex max-w-md gap-x-4">
+            <form className="mt-6 flex max-w-md gap-x-4" onSubmit={(e) => { e.preventDefault(); alert('Subscribed successfully!'); }}>
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
@@ -29,7 +31,7 @@ export default function Subscribe() {
               >
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">

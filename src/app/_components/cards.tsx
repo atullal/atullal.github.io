@@ -6,7 +6,7 @@ const Cards = () => {
             <div className="mx-auto  max-w-6xl text-gray-500">
                 <div className="">
                     <h2 className="text-3xl text-gray-950 dark:text-white font-semibold">Contact</h2>
-                    <p className="mt-6 text-gray-700 dark:text-gray-300">Check out my projects on GitHub or connect with me on LinkedIn if you're into tech, innovation, or just want to chat.</p>
+                    <p className="mt-6 text-gray-700 dark:text-gray-300">Check out my projects on GitHub or connect with me on LinkedIn if you&apos;re into tech, innovation, or just want to chat.</p>
                 </div>
                 <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div className="relative group overflow-hidden p-8 rounded-xl bg-white border border-gray-200 dark:border-gray-800 dark:bg-gray-900">

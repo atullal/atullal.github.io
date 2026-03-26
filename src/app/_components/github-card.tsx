@@ -1,14 +1,17 @@
+import Image from "next/image";
+
 export function GitHubCard({ repoData }: any) {
     return (
       <div className="mx-auto max-w-2xl">
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           {repoData ? (
             <div className="flex flex-col md:flex-row">
-              <div className="w-full md:w-1/3 flex-shrink-0">
-                <img
+              <div className="w-full md:w-1/3 flex-shrink-0 relative">
+                <Image
                   src={`https://opengraph.githubassets.com/1/${repoData.owner.login}/${repoData.name}/`}
                   alt={`${repoData.name} repository image`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="w-full md:w-2/3 p-6">

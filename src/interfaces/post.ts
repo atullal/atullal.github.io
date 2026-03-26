@@ -13,4 +13,6 @@ export type Post = {
   content: string;
   preview?: boolean;
   github?: string;
+  draft?: boolean;
+  published?: boolean;
 };
